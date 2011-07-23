@@ -12,6 +12,7 @@ module Jasmine
         output.unshift([ "specrunner.#{$$}.filter.html", files_list.filtered_files_to_html ]) if files_list.filtered?
 
         output.each do |name, files|
+          p "opening #{name}"
           File.open(name, 'w') { |fh| fh.print template_for(files, files_list.spec_file_line_numbers) }
         end
 

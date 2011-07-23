@@ -59,6 +59,7 @@ module Jasmine
       end
 
       def run
+        p "running"
         files_list = Jasmine::FilesList.new(
           :config => jasmine_config,
           :only => @options[:files]
